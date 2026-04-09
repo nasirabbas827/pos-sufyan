@@ -201,6 +201,7 @@ $out_count  = $conn->query("SELECT COUNT(*) AS cnt FROM products WHERE stock_qua
                 <table class="table table-hover align-middle mb-0">
                     <thead class="table-dark">
                         <tr>
+                            <th>ID</th>
                             <th>Image</th>
                             <th>Name</th>
                             <th>Category</th>
@@ -224,6 +225,8 @@ $out_count  = $conn->query("SELECT COUNT(*) AS cnt FROM products WHERE stock_qua
                                        ($p['stock_quantity'] <= $p['low_stock_threshold'] ? 'warning' : 'success');
                     ?>
                         <tr class="<?= $status_class ?>" data-id="<?= $p['id'] ?>">
+                            <td class="fw-medium prod-name"><?= htmlspecialchars($p['id']) ?></td>
+
                             <td>
                                 <?php if($p['image']): ?>
                                     <img src="uploads/<?= htmlspecialchars($p['image']) ?>" class="product-thumb" alt="">

@@ -85,8 +85,9 @@ $recentSales = mysqli_query($conn, "SELECT s.*, c.name as customer_name FROM sal
     </div>
     <?php endif; ?>
 
-    <div class="row g-3 mb-4">
-        <div class="col-md-3">
+<div class="row g-3 mb-4">
+    <div class="col-md-3">
+        <a href="users.php" class="text-decoration-none">
             <div class="card stats-card bg-primary text-white shadow">
                 <div class="card-body">
                     <h6 class="text-uppercase small">Total Users</h6>
@@ -94,8 +95,11 @@ $recentSales = mysqli_query($conn, "SELECT s.*, c.name as customer_name FROM sal
                     <i class="fa-solid fa-users card-icon"></i>
                 </div>
             </div>
-        </div>
-        <div class="col-md-3">
+        </a>
+    </div>
+
+    <div class="col-md-3">
+        <a href="admin_reports.php" class="text-decoration-none">
             <div class="card stats-card bg-success text-white shadow">
                 <div class="card-body">
                     <h6 class="text-uppercase small">Total Sales</h6>
@@ -103,8 +107,11 @@ $recentSales = mysqli_query($conn, "SELECT s.*, c.name as customer_name FROM sal
                     <i class="fa-solid fa-indian-rupee-sign card-icon"></i>
                 </div>
             </div>
-        </div>
-        <div class="col-md-3">
+        </a>
+    </div>
+
+    <div class="col-md-3">
+        <a href="products.php" class="text-decoration-none">
             <div class="card stats-card bg-info text-white shadow">
                 <div class="card-body">
                     <h6 class="text-uppercase small">Total Products</h6>
@@ -112,8 +119,11 @@ $recentSales = mysqli_query($conn, "SELECT s.*, c.name as customer_name FROM sal
                     <i class="fa-solid fa-boxes-stacked card-icon"></i>
                 </div>
             </div>
-        </div>
-        <div class="col-md-3">
+        </a>
+    </div>
+
+    <div class="col-md-3">
+        <a href="categories.php" class="text-decoration-none">
             <div class="card stats-card bg-warning text-dark shadow">
                 <div class="card-body">
                     <h6 class="text-uppercase small">Categories</h6>
@@ -121,8 +131,9 @@ $recentSales = mysqli_query($conn, "SELECT s.*, c.name as customer_name FROM sal
                     <i class="fa-solid fa-tags card-icon"></i>
                 </div>
             </div>
-        </div>
+        </a>
     </div>
+</div>
 
     <div class="row g-4 mb-4">
         <div class="col-md-8">

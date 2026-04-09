@@ -130,6 +130,7 @@ $users = $res->fetch_all(MYSQLI_ASSOC);
         <table class="table table-bordered table-hover align-middle">
             <thead class="table-dark">
                 <tr>
+                    <th>ID</th>
                     <th>Name</th>
                     <th>Email</th>
                     <th>Phone</th>
@@ -144,6 +145,7 @@ $users = $res->fetch_all(MYSQLI_ASSOC);
             <?php else: ?>
                 <?php foreach ($users as $u): ?>
                     <tr data-id="<?= $u['id'] ?>">
+                        <td class="name"><?= htmlspecialchars($u['id']) ?></td>
                         <td class="name"><?= htmlspecialchars($u['full_name']) ?></td>
                         <td class="email"><?= htmlspecialchars($u['email']) ?></td>
                         <td class="phone"><?= htmlspecialchars($u['phone'] ?: '-') ?></td>

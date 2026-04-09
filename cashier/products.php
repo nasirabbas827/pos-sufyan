@@ -189,6 +189,7 @@ $products = $stmt->get_result();
                 <table class="table table-hover table-bordered align-middle mb-0">
                     <thead>
                         <tr>
+                            <th>ID</th>
                             <th>Image</th>
                             <th>Product</th>
                             <th>Category</th>
@@ -201,6 +202,7 @@ $products = $stmt->get_result();
                     <?php if ($products->num_rows > 0): ?>
                         <?php while ($row = $products->fetch_assoc()): ?>
                             <tr>
+                                <td><?= htmlspecialchars($row['id']) ?></td>
                                 <td>
                                     <?php if ($row['image']): ?>
                                         <img src="../admin/uploads/<?= htmlspecialchars($row['image']) ?>" 

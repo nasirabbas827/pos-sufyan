@@ -86,6 +86,7 @@ $categories = $res->fetch_all(MYSQLI_ASSOC);
     <table class="table table-bordered align-middle">
         <thead class="table-dark">
             <tr>
+                <th>ID</th>
                 <th>Name</th>
                 <th>Created</th>
                 <th width="120">Actions</th>
@@ -96,6 +97,7 @@ $categories = $res->fetch_all(MYSQLI_ASSOC);
             <tr><td colspan="3" class="text-center">No categories found</td></tr>
         <?php endif; foreach ($categories as $c): ?>
             <tr data-id="<?= $c['id'] ?>">
+                <td class="cat-name"><?= htmlspecialchars($c['id']) ?></td>
                 <td class="cat-name"><?= htmlspecialchars($c['name']) ?></td>
                 <td><?= $c['created_at'] ?></td>
                 <td>

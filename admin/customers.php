@@ -93,9 +93,8 @@ $customers = $conn->query("
     <table class="table table-bordered align-middle">
         <thead class="table-dark">
             <tr>
+                <th>ID</th>
                 <th>Name</th>
-                <th>Address</th>
-                <th>Email</th>
                 <th>Phone</th>
                 <th width="140">Actions</th>
             </tr>
@@ -105,9 +104,8 @@ $customers = $conn->query("
             <tr><td colspan="5" class="text-center">No customers found</td></tr>
         <?php else: while($c = $customers->fetch_assoc()): ?>
             <tr data-id="<?= $c['id'] ?>">
+                <td class="cust-name"><?= htmlspecialchars($c['id']) ?></td>
                 <td class="cust-name"><?= htmlspecialchars($c['name']) ?></td>
-                <td class="cust-address"><?= htmlspecialchars($c['address']) ?></td>
-                <td class="cust-email"><?= htmlspecialchars($c['email']) ?></td>
                 <td class="cust-phone"><?= htmlspecialchars($c['phone_number']) ?></td>
                 <td>
                     <button class="btn btn-sm btn-info m-1" onclick="openEdit(this)">Edit</button>

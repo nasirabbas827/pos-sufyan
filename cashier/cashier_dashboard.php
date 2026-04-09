@@ -96,41 +96,49 @@ $low_stock_total = $count_res->fetch_assoc()['count'];
             </a>
         </div>
 
-        <div class="row g-3 mb-4">
-            <div class="col-md-4">
-                <div class="card stat-card bg-gradient-primary shadow p-3 text-white">
-                    <div class="d-flex align-items-center">
-                        <div class="flex-grow-1">
-                            <div class="small text-uppercase opacity-75">Today's Sales</div>
-                            <div class="h3 fw-bold mb-0"><?php echo $today_sales_count; ?></div>
-                        </div>
-                        <i class="fas fa-shopping-cart fa-2x opacity-50"></i>
+<div class="row g-3 mb-4">
+    <div class="col-md-4">
+        <a href="cashier_sales.php" class="text-decoration-none text-white">
+            <div class="card stat-card bg-gradient-primary shadow p-3 text-white">
+                <div class="d-flex align-items-center">
+                    <div class="flex-grow-1">
+                        <div class="small text-uppercase opacity-75">Today's Sales</div>
+                        <div class="h3 fw-bold mb-0"><?php echo $today_sales_count; ?></div>
                     </div>
+                    <i class="fas fa-shopping-cart fa-2x opacity-50"></i>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="card stat-card bg-gradient-success shadow p-3 text-white">
-                    <div class="d-flex align-items-center">
-                        <div class="flex-grow-1">
-                            <div class="small text-uppercase opacity-75">Today's Revenue</div>
-                            <div class="h3 fw-bold mb-0">RS <?php echo number_format($today_revenue, 2); ?></div>
-                        </div>
-                        <i class="fas fa-coins fa-2x opacity-50"></i>
+        </a>
+    </div>
+
+    <div class="col-md-4">
+        <a href="cashier_sales.php" class="text-decoration-none text-white">
+            <div class="card stat-card bg-gradient-success shadow p-3 text-white">
+                <div class="d-flex align-items-center">
+                    <div class="flex-grow-1">
+                        <div class="small text-uppercase opacity-75">Today's Revenue</div>
+                        <div class="h3 fw-bold mb-0">RS <?php echo number_format($today_revenue, 2); ?></div>
                     </div>
+                    <i class="fas fa-coins fa-2x opacity-50"></i>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="card stat-card <?php echo ($low_stock_total > 0) ? 'bg-danger' : 'bg-gradient-warning'; ?> shadow p-3 text-white">
-                    <div class="d-flex align-items-center">
-                        <div class="flex-grow-1">
-                            <div class="small text-uppercase opacity-75">Critical Stock</div>
-                            <div class="h3 fw-bold mb-0"><?php echo $low_stock_total; ?></div>
-                        </div>
-                        <i class="fas fa-box-open fa-2x opacity-50"></i>
+        </a>
+    </div>
+
+    <div class="col-md-4">
+        <a href="products.php" class="text-decoration-none text-white">
+            <div class="card stat-card <?php echo ($low_stock_total > 0) ? 'bg-danger' : 'bg-gradient-warning'; ?> shadow p-3 text-white">
+                <div class="d-flex align-items-center">
+                    <div class="flex-grow-1">
+                        <div class="small text-uppercase opacity-75">Critical Stock</div>
+                        <div class="h3 fw-bold mb-0"><?php echo $low_stock_total; ?></div>
                     </div>
+                    <i class="fas fa-box-open fa-2x opacity-50"></i>
                 </div>
             </div>
-        </div>
+        </a>
+    </div>
+</div>
 
         <div class="row">
             <div class="col-lg-8">
